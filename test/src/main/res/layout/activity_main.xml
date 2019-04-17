@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout >
+    <data>
+        <variable
+                name="main"
+                type="cn.enjoytoday.shortvideo.test.viewmodel.MainViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+
+        <cn.enjoytoday.base.widgets.HeadBarView
+                android:id="@+id/headerBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="测试主页" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerBar">
+
+
+            <Button
+                    android:id="@+id/api_test"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="常用API操作" />
+
+            <Button
+                    android:id="@+id/openglEs"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="OpenGL ES API的使用操作" />
+
+
+            <Button
+                    android:id="@+id/audioOp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="音频操作实现" />
+
+
+            <Button
+                    android:id="@+id/videoOp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="视频操作实现" />
+
+
+            <Button
+                    android:id="@+id/thirdLib"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="三方库" />
+
+            <Button
+                    android:id="@+id/others"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(view) -> main.onClick(view)}"
+                    android:text="其他" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
