@@ -4,6 +4,9 @@
 开发过程会对应在wiki上进行记录分享。    
 
 
+## 分支情况
+
+- [mvvm](https://github.com/amikoj/shortVideo/tree/mvvm-liveData)
 
 
 
