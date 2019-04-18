@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable name="viewModel" type="cn.enjoytoday.shortvideo.test.ui.api.ApiViewModel"/>
+
+
+    </data>
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <cn.enjoytoday.base.widgets.HeadBarView
+                android:id="@+id/headerBar"
+                app:title="三种方式绘制图片"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <Button
+                    android:id="@+id/imageViewBtn"
+                    android:text="ImageView绘制图片"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:id="@+id/surfaceViewBtn"
+                    android:text="SurfaceView绘制图片"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:id="@+id/customViewBtn"
+                    android:text="自定义View绘制图片"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:gravity="center"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+            <ImageView
+                    android:id="@+id/toImageView"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:layout_width="0dp"
+                    android:src="@drawable/ic_back"
+                    android:layout_height="match_parent"/>
+
+
+            <SurfaceView
+                    android:id="@+id/surfaceView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+
+            <cn.enjoytoday.shortvideo.test.ui.api.CustomerImageView
+                    android:id="@+id/customView"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</layout>

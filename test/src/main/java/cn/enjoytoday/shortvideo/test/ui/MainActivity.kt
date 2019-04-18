@@ -1,10 +1,13 @@
-package cn.enjoytoday.shortvideo.test
+package cn.enjoytoday.shortvideo.test.ui
 
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import cn.enjoytoday.base.mvvm.BaseMvvmActivity
+import cn.enjoytoday.shortvideo.test.R
 import cn.enjoytoday.shortvideo.test.databinding.ActivityMainBinding
+import cn.enjoytoday.shortvideo.test.ui.api.ApiActivity
 import cn.enjoytoday.shortvideo.test.viewmodel.MainViewModel
+import org.jetbrains.anko.startActivity
 
 class MainActivity :
     BaseMvvmActivity<ActivityMainBinding,MainViewModel>(R.layout.activity_main){
@@ -19,9 +22,7 @@ class MainActivity :
 
                 if (!it.hasBeenHandled){
                     when(it.peekContent()){
-                        R.id.api_test -> {
-                            //api操作
-                        }
+                        R.id.api_test -> startActivity<ApiActivity>()
 
 
                     }

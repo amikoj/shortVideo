@@ -4,7 +4,7 @@ buildscript {
 
 
     ext.debugManifest =  [
-            BAIDU_STAT_ID: "27e7c4ce91",
+            BAIDU_STAT_ID: "62a3c4ef7d",
             CHANNEL:"debug",
             IS_EXCEPTION_LOG:false,
             IS_ONLY_WIFI:false,
@@ -13,7 +13,7 @@ buildscript {
             IS_WIFI_LOCATION:true
     ]
     ext.releaseManifest = [
-            BAIDU_STAT_ID: "cdc0cd589e",
+            BAIDU_STAT_ID: "a9050a8ce7",
             CHANNEL:"debug",
             IS_EXCEPTION_LOG:false,
             IS_ONLY_WIFI:false,

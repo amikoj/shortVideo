@@ -1,6 +1,8 @@
 package cn.enjoytoday.base.mvvm
 
 import android.view.LayoutInflater
+import androidx.annotation.IntegerRes
+import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import cn.enjoytoday.base.base.BaseActivity
@@ -23,7 +25,7 @@ abstract class BaseMvvmActivity<in T: ViewDataBinding, V:ViewModel>():BaseActivi
     private  val tClass:Class<T>
     private  val vClass:Class<V>
 
-    constructor( layoutId:Int):this()
+    constructor(@LayoutRes layoutId:Int):this()
 
     init {
         val type = javaClass.genericSuperclass

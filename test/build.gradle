@@ -13,7 +13,7 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
-        applicationId "cn.enjoytoday.backup.test"
+        applicationId "cn.enjoytoday.shortvideo"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCode
