@@ -52,6 +52,14 @@
                     android:layout_height="wrap_content"/>
 
 
+            <Button
+                    android:id="@+id/customSurfaceViewBtn"
+                    android:text="自定义SurfaceView"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
         </LinearLayout>
 
 

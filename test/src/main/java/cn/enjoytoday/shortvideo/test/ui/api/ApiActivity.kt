@@ -8,9 +8,11 @@ import androidx.lifecycle.Observer
 import cn.enjoytoday.base.mvvm.BaseMvvmActivity
 import cn.enjoytoday.shortvideo.test.R
 import cn.enjoytoday.shortvideo.test.databinding.ActivityApiBinding
+import cn.enjoytoday.shortvideo.test.ui.customsurface.CustomSurfaceActivity
+import cn.enjoytoday.shortvideo.test.ui.customsurface.CustomerSurfaceView
 import kotlinx.android.synthetic.main.activity_api.*
 import me.jessyan.autosize.utils.LogUtils
-
+import org.jetbrains.anko.startActivity
 /**
  * 作者： hfcai
  * 时间： 19-4-18
@@ -34,6 +36,7 @@ class ApiActivity :BaseMvvmActivity<ActivityApiBinding,ApiViewModel>(R.layout.ac
                         R.id.surfaceViewBtn -> loadImageBySurface()
                         // 通过Customer加载图片
                         R.id.customViewBtn -> loadImageByCustomer()
+                        R.id.customSurfaceViewBtn -> this@ApiActivity.startActivity<CustomSurfaceActivity>()
 
 
                     }
