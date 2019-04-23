@@ -60,6 +60,15 @@
                     android:layout_height="wrap_content"/>
 
 
+            <Button
+                    android:id="@+id/audioGather"
+                    android:text="音频取样"
+                    android:onClick="@{(view)->viewModel.onClick(view)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+
         </LinearLayout>
 
 
